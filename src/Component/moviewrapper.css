@@ -1,0 +1,144 @@
+.movieSearch-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 50px 50px;
+    margin-top: 5.2rem;
+  }
+  
+  .movieSearch {
+    background-color: rgba(255, 255, 255, 0.195);
+    padding: 20px;
+    height: max-content;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   
+  }
+  
+  .movieSearch img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0px 6px 15px -3px rgba(0,0,0,0.1);
+  }
+  
+  .movieSearch h2 {
+    color: #00a8fc;
+    font-size: 1.5rem;
+    margin-top: 5px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  .movieSearch p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+   .movieSearchrating {
+    border: 2px solid #008dd4;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #d8d8d8;
+    margin-left: 3rem;
+  }
+  @media (max-width: 1200px) {
+    .container {
+      padding: 50px;
+    }
+    .movieSearch-wrapper {
+      padding: 50px;
+    }
+    .movieSearch h2 {
+        font-size: 15px;
+    }
+    .movieSearch p {
+        font-size: 10px;
+    }
+    .movieSearch .movieSearchrating {
+        font-size: 8px;
+        padding: 3px 5px;
+    }
+    .movieSearchread-more {
+        font-size: 10px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .movieSearch-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 50px 50px;
+      }
+  }
+  
+  @media (max-width: 600px) {
+    .movieSearch-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 50px 50px;
+      }
+  
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+  
+    .search-input {
+      width: 260px;
+    }
+  
+    .filters {
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+  
+    #sort-by,
+    #genre {
+      padding: 5px 8px;
+      font-size: 10px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .movieSearch-wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        padding: 20px 20px;
+      }
+  
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+  
+    .search-input {
+      width: 250px;
+    }
+   .search-button {
+    font-size: 12px;
+   }
+    .filters {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 20px;
+      gap: 7px;
+      margin-bottom: 10px;
+    }
+  
+    #sort-by,
+    #genre {
+      padding: 5px 8px;
+      font-size: 10px;
+    }
+  }

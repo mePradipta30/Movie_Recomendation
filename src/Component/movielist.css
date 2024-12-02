@@ -1,0 +1,61 @@
+.MovieList{
+    padding: 0 3rem 2rem 3rem;
+    margin: 5.2rem 0rem 2rem 0rem;
+}
+
+.listTitle{
+    font-size: 1.75rem;
+    font-family: "doto", sans-serif;
+    font-weight: 800;
+    margin: 3.8rem 1rem;
+    padding: 4rem 0rem .3rem 0rem;
+    color: rgb(139, 220, 139);
+}
+
+.listCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+}
+h3{
+    padding: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(2, 92, 5);
+    text-align: center;
+}
+h2{
+    color: #fff;
+    text-align: left;
+    box-shadow: 0 1.2px red;
+}
+h5{
+    font-size: 2.2rem !important;
+    text-align: center !important;
+    color: #fff !important;
+    /* box-shadow: 0 1.3px black; */
+    text-decoration: overline;
+    text-shadow: 5px 5px 8px #07ae07;
+}
+
+@media (max-width: 800px) {
+    .listTitle{
+        margin: 3rem 1rem;
+        padding: 1rem 0rem .3rem 0rem;
+    }
+    .MovieList {
+        padding: 0.3rem 2rem 3rem;
+        margin: 3rem 0rem 2rem 0rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .listTitle{
+        /* font-size: 1.1rem; */
+        margin: 1rem 1rem 1rem 1rem;
+    }
+    .MovieList {
+        padding: 0.3rem 1rem 2rem 1rem;
+        margin: 1.4rem 0rem 1rem 0rem;
+    }
+}

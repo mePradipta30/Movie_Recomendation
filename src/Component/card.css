@@ -1,0 +1,118 @@
+.cards{
+    display: inline-block;
+    min-width: 200px;
+    height: 300px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all .2s;
+    margin: .3rem;
+    cursor: pointer;
+    border: 1px solid rgb(99, 99, 99);
+    z-index: 0;
+    /* box-sizing: border-box; */
+    transition: transform .2s;
+}
+/* .airCards{
+    display: inline-block;
+    min-width: 400px;
+    height: 300px;
+} */
+
+.cards:hover{
+    transform: scale(1.1);
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,rgba(0, 0, 0, 0.12) 0px -12px 30px ;
+}
+.cardsImage{
+    height: 300px;
+    width: 100%;
+}
+.cardsOverlay{
+    position: absolute;
+    padding: 0 1rem 1rem 1rem;
+    bottom: 0;
+    height: 290px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,1));
+    transition: all.3s;
+    opacity: 0;
+}
+.cardsOverlay:hover{
+    opacity: 1;
+}
+.cardsTitle{
+    font-size: 1.1rem;
+    font-weight: 900;
+    margin-bottom: .45rem;
+}
+.cardsRuntime{
+    font-size: .85rem;
+    font-family: "Doto", sans-serif;
+    margin-bottom: .45rem;
+}
+.cardsVoting{
+    float: right;
+}
+.vote{
+    margin-left: 7px;
+    margin-top: 7px;
+}
+.cardsDesc{
+    font-style: italic;
+    font-size: .85rem;
+    margin-bottom: .35rem;
+}
+
+@media (max-width: 450px) {
+    .cards {
+        min-width: 150px; 
+        height: 250px; 
+        border-radius: 10px; 
+        margin: 0.2rem; 
+    }
+
+    .cards:hover {
+        transform: scale(1.05); 
+        z-index: 10;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 25px, rgba(0, 0, 0, 0.1) 0px -8px 15px;
+    }
+
+    .cardsImage {
+        height: 250px; 
+        width: 100%;
+    }
+
+    .cardsOverlay {
+        padding: 0.5rem 0.8rem;
+        height: 240px; 
+        justify-content: flex-end;
+    }
+
+    .cardsTitle {
+        font-size: 0.9rem; 
+        margin-bottom: 0.35rem; 
+    }
+
+    .cardsRuntime {
+        font-size: 0.75rem; 
+        margin-bottom: 0.35rem;
+    }
+
+    .cardsVoting {
+        font-size: 0.75rem; 
+    }
+
+    .vote {
+        margin-left: 5px; 
+        margin-top: 5px;
+    }
+
+    .cardsDesc {
+        font-size: 0.75rem;
+        margin-bottom: 0.3rem;
+    }
+}

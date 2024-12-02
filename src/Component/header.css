@@ -1,0 +1,198 @@
+.header{
+    width: 100%;
+    padding: 1rem 10px 20px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #0000001c;
+    backdrop-filter: blur(6px) !important;
+    z-index: 10;
+}
+
+.headerLeft{
+    margin: 0px  20px;
+}
+.headerRight{
+  display: flex;
+  flex-direction: column;
+  margin: 0px  20px;
+}
+.headerLeft , .headerRight{
+    display: flex;
+    align-items: start;
+}
+a > span{
+    margin: 2px 25px;
+    padding: 5px 0px;
+    font-size: 1.18rem;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    transition: all .3s ease;
+}
+.line:hover{
+  text-decoration: overline;
+  text-shadow: 0px -1px 6px rgb(137, 0, 0);
+}
+a > span:hover{
+    color: rgb(164, 58, 9);
+}
+.headerIcon{
+    width: 95px;
+    cursor: pointer;
+}
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown button */
+  .dropbtn {
+    background-color: #fe010196;
+    color: white;
+    padding: 5px 13px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all .3s;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdownContent {
+    display: none;
+    font-size: .9rem;
+    position: absolute;
+    background-color: #73101085;
+    min-width: 140px;
+    border-radius: 6px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: all .3s;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdownContent a {
+    color: rgb(249, 249, 249);
+    padding: 7px 14px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdownContent {
+    display: block;
+  }
+  
+  /* Style the dropdown links on hover */
+  .dropdownContent a:hover {
+    background-color: #590505;
+  }
+  
+  /* Style the dropdown button on hover */
+  .dropdown:hover .dropbtn {
+    background-color: #830909;
+  }
+  
+
+  @media (max-width: 1200px)  {
+    .header{
+      width: 100%;
+      padding: 10px 5px 10px 5px;
+    }
+    a > span{
+      margin: 2px 10px;
+      padding: 4px 0px;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .headerIcon{
+      width: 60px;
+      cursor: pointer;
+  }
+  .header{
+    padding: 7px 2px 7px 2px;
+  }
+  a > span{
+    font-size: .8rem;
+  }
+  .dropbtn {
+    padding: 5px 7px;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  .headerRight{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px  10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .headerRight{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .header {
+    flex-wrap: wrap; /* Ensure items wrap properly */
+    padding: 1px 10px; /* Reduce padding */
+    justify-content: center; /* Center content for a better mobile layout */
+  }
+
+  .headerLeft {
+    margin: 0 auto; /* Center the header content */
+    flex-direction: row; /* Stack links vertically */
+    align-items: center;
+    gap: 17px;
+  }
+
+  .headerIcon {
+    width: 50px; /* Smaller logo size */
+    margin-top: 15px; /* Add space below logo */
+  }
+
+  a > span {
+    font-size: 0.75rem; /* Smaller text for links */
+    margin: 5px 0; /* Stack links closer together */
+    padding: 4px 0;
+  }
+
+  .line:hover {
+    text-decoration: underline; /* Simplify hover effect for better readability */
+    text-shadow: none; /* Remove shadow for cleaner look */
+  }
+
+  .dropdown {
+    margin-top: 10px; /* Add space for dropdown */
+  }
+
+  .dropbtn {
+    padding: 4px 8px; /* Smaller button padding */
+    font-size: 12px; /* Adjust font size */
+  }
+
+  .dropdownContent {
+    font-size: 0.75rem; /* Smaller font for dropdown items */
+    min-width: 120px; /* Adjust dropdown width */
+  }
+
+  .headerRight {
+    flex-direction: column; /* Align search vertically */
+    margin-top: 10px; /* Add spacing between left and right sections */
+    width: 100%; /* Ensure full width for mobile */
+    align-items: center; /* Center align search */
+  }
+}

@@ -1,0 +1,515 @@
+.posterImage{
+    height: 750px;
+    margin-top: 0px;
+}
+.seriesPosterImage{
+    height: 750px;
+    margin-top: 0rem;
+}
+
+
+.posterImage img{
+    width: 100%;
+    margin: auto;
+    display: block;
+   object-fit: cover;
+}
+.seriesPosterImage img{
+    width: 100%;
+    margin: auto;
+    display: block;
+    background-size: contain;
+}
+
+.poster{
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+.airTodayPoster{
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+
+.posterOverlay{
+    position: absolute;
+    padding: 4rem 5rem;
+    bottom: 0;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: all .5s ease;
+    transform: translateY(20px);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0,0,0,1));
+    /* background-color: skyblue; */
+}
+.posterOverlay.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hidden state (to reset visibility) */
+.posterOverlay.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.seriesOverlay{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    padding: 3rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    opacity: 1;
+    transition: opacity .4s;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0,0,0,1));
+}
+.popularOverlay{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 60%;
+    padding: 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    opacity: 1;
+    transition: opacity .4s;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0,0,0,1));
+}
+
+
+.posterOverlay:hover{
+    opacity: 5;
+}
+.seriesOverlay:hover{
+    opacity: 6;
+}
+
+
+.posterOverlay_title{
+    font-size: 4rem;
+    font-family: "Lacquer", system-ui;
+    font-weight: 800;
+    margin-bottom: .7rem;
+    text-align: left;
+}
+.seriesTitle{
+    font-size: 3.8rem;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    margin-bottom: .1rem;
+    text-align: right;
+}
+
+
+.posterOverlay_runtime{
+    font-size: 1.6rem;
+    font-family: "Doto", sans-serif;
+    font-weight: 700;
+    /* font-family: "Bokor", system-ui; */
+    /* font-family: "Lacquer", system-ui; */
+    margin-bottom: .5rem;
+}
+.seriesAirDate{
+    font-size: 1.5rem;
+     /* font-family: "Lacquer", system-ui; */
+      font-family: "Bokor", system-ui;
+      letter-spacing: 9px;
+    font-weight: 200;
+    margin-bottom: .3rem;
+}
+
+
+.posterOverlay_rating{
+    font-size: 1.2rem;
+    font-family: "Doto", sans-serif;
+    font-weight: 900;
+    margin-left: .4rem;
+}
+.seriesRating{
+    font-size: 1.4rem;
+   font-family: "Lacquer", system-ui;
+    font-weight: 700;
+    margin-right: .7rem;
+}
+.star{
+    margin-left: .5rem;
+}
+
+.posterOverlay_desc{
+    width: 70%;
+    font-size: 1.1rem;
+    font-family: "Nunito", sans-serif;
+    font-weight: 300;
+    line-height: 26px;
+    margin-top: 1rem;
+    margin-bottom: .2rem;
+    text-align: left;
+}
+
+
+.seriesLang{
+    font-size: 1.2rem;
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+    margin-top: .9rem;
+}
+.lang {
+   text-decoration: overline;
+}
+.lang span{
+    margin-left: .6rem;
+}
+
+.airingTitle{
+    margin: 4rem 5rem 1rem 5rem;
+    color: rgba(130, 255, 47, 0.664);
+    padding-bottom: 4px;
+    box-shadow: 0 2px  rgba(194, 34, 2, 0.992);
+}
+
+.separate{
+    height: 4px;
+    background-color: rgb(32, 32, 32);
+}
+
+
+/* SIDEBAR */
+
+.parent{
+    margin-bottom: 2rem;
+}
+.nowPlaying{
+    height: 570px;
+    width: 88%;
+    margin-top: 1rem;
+}
+.nowPlaying img{
+        width: 100%;
+        margin: auto;
+        display: block;
+        background-size: contain;
+}
+.sidebar{
+    background-color: rgba(4, 4, 4, 0);
+    width: 12%;
+    height: 650px;
+    padding: 2rem .7rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+    border-radius: 10px;
+    border: 4px solid rgb(57, 57, 57);
+}
+.totalContent{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: flex-start;
+    margin-bottom: 3rem ;
+    /* background-color: blue; */
+}
+.alignLeft{
+    position: absolute;
+    bottom: 0;
+    right: 7rem;
+    width: 100%;
+    height: 60%;
+    padding: 3rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    opacity: 1;
+    transition: opacity .4s;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0,0,0,1));
+}
+.play{
+    color: #08a210;
+    font-family: "Doto", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    padding: 0 .2rem .2rem .6rem;
+}
+.videoIcon{
+    padding-top: 20px;
+}
+.sideBtn{
+    background-color: #4d4d4dc6;
+    color: rgb(27, 191, 5);
+    padding:12px 15px;
+    border-radius: 9px;
+    font-size: 19px;
+    /* font-family: "Doto", sans-serif; */
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .3s;
+}
+.sideBtn:hover{
+    background-color: #aaaaaa64;
+    transform: translateY(12px);
+    color: rgb(14, 229, 14);
+}
+
+.popularity{
+    margin: .4rem;
+}
+.popularity h2{
+    font-size: 1.7rem;
+}
+
+@media (max-width: 1200px) {
+    .posterImage{
+        height: 550px;
+        margin-top: 4rem;
+    }
+    .seriesPosterImage{
+        height: 550px;
+        margin-top: 2.4rem;
+        /* margin-bottom: 2rem; */
+    }
+}
+@media (max-width: 800px) {
+    .posterImage{
+        height: 450px;
+        margin-top: 5rem;
+    }
+    .seriesPosterImage{
+        height: 450px;
+        margin-top: 2.7rem;
+    }
+    .posterOverlay{
+        padding: 3rem 3rem;
+        bottom: 0;
+        height: 40%;
+        width: 100%;
+    }
+    .seriesOverlay{
+        padding: 1rem 1rem;
+        margin-bottom: 1rem;
+    }
+    .posterOverlay_title{
+        font-size: 3rem;
+    }
+    .posterOverlay_runtime {
+        font-size: 1.1rem;
+    }
+    .posterOverlay_rating {
+        font-size: 1rem;
+    }
+    .posterOverlay_desc {
+        width: 90%;
+        font-size: .9rem;
+        line-height: 20px;
+        margin-bottom: 2rem;
+    }
+
+    .seriesTitle {
+        font-size: 2.5rem;
+    }    
+    .seriesAirDate {
+        font-size: 1.2rem;
+    }
+    .seriesRating {
+        font-size: 1.1rem;
+    }
+
+    .popularOverlay{
+        padding: 1rem 2rem;
+    }
+}
+@media (max-width: 600px) {
+    .posterImage{
+        height: 450px;
+        margin-top: 5rem;
+    }
+    .seriesPosterImage{
+        height: 450px;
+        margin-top: 2.8rem;
+    }
+    .posterOverlay{
+        padding: 2rem 1rem;
+        bottom: 0;
+        height: 40%;
+        width: 100%;
+    }
+    .seriesOverlay{
+        padding: 1rem 1rem 5rem 1rem;
+        margin-bottom: 1rem;
+    }
+}
+@media (max-width: 450px) {
+    .posterImage{
+        height: 350px;
+        margin-top: 6.5rem;
+    }
+    .seriesPosterImage{
+        height: 350px;
+        margin-top: 3.1rem;
+        padding: 1rem;
+    }
+    .posterOverlay{
+        padding: 3rem 1rem;
+        bottom: 0;
+        height: 40%;
+        width: 100%;
+    }
+    .posterOverlay_title{
+        font-size: 2rem;
+    }
+    .posterOverlay_runtime {
+        font-size: 1rem;
+    }
+    .posterOverlay_rating {
+        font-size: .9rem;
+    }
+    .posterOverlay_desc {
+        width: 90%;
+        font-size: .8rem;
+        line-height: 20px;
+        margin-bottom: 1rem;
+        display: none;
+    }
+    
+    .seriesTitle {
+        font-size: 1.3rem;
+    }    
+    .seriesAirDate {
+        font-size: 1.1rem;
+    }
+    .seriesRating {
+        font-size: 1rem;
+    }
+
+    .popularOverlay{
+        padding: 1rem 1rem;
+        margin-bottom: 5rem;
+    }
+    .popularity h2{
+        font-size: 1rem;
+    }
+    .lang{
+        display: none;
+    }
+    .airingTitle{
+        margin: 1rem 2rem 1rem 2rem;
+        font-size: 1.5rem;
+    }
+}
+
+/* General Responsive Styling */
+@media (max-width: 800px) {
+    .parent {
+        margin-bottom: 1.5rem;
+    }
+    .totalContent {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+    .sidebar {
+        width: 90%;
+        height: auto;
+        margin: 1rem 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        border: 2px solid rgb(57, 57, 57);
+        padding: 1rem 3rem;
+    }
+    .sideBtn {
+        width: 90%;
+        padding: 16px;
+        font-size: 16px;
+    }
+    .nowPlaying {
+        width: 95%;
+        height: 450px;
+        margin-top: 1rem;
+    }
+    .nowPlaying img {
+        height: auto;
+    }
+    .alignLeft {
+        padding: 2rem;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 2rem;
+    }
+    .play {
+        font-size: 2.5rem;
+    }
+    .videoIcon {
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 450px) {
+    .parent {
+        margin-bottom: 1rem;
+    }
+    .totalContent {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+        border: 2px solid rgb(57, 57, 57);
+        padding: 1rem 3rem;
+    }
+    .sideBtn {
+        width: 90%;
+        padding: 8px;
+        font-size: 14px;
+    }
+    .nowPlaying {
+        width: 100%;
+        height: 300px;
+        margin-top: 0.5rem;
+    }
+    .nowPlaying img {
+        height: auto;
+    }
+    .alignLeft {
+        padding: 1rem;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 2rem;
+    }
+    .play {
+        font-size: 2rem;
+    }
+    .videoIcon {
+        padding-top: 5px;
+    }
+}
+
