@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route, Outlet } from "react-router-dom"
 import Header from './Component/Header'
 import Home from './Pages/Home'
 import MovieList from './Component/MovieList'
@@ -13,13 +13,27 @@ import TvDetail from './Pages/TvDetail'
 import PersonDetail from './Pages/PersonDetail'
 import Search from './Component/Search'
 import MovieWrapper from './Component/MovieWrapper'
+import Footer from './Component/Footer'
 
+
+
+function Layout() {
+  return (
+
+    <>
+      <Header />
+        <Outlet />
+      <Footer />
+    </>
+  )
+}
 
 const App = () => {
   return (
     <Router>
-      <Header />
+
       <Routes>
+        <Route path='/' element = {<Layout/>}>
         <Route index element={<Home />}></Route>
         <Route path="/" element={<Search />} />
         <Route path="/movies" element={<MovieWrapper />} />
@@ -32,6 +46,7 @@ const App = () => {
         <Route path="/discover/tv" element={<TvDiscover />} />
         <Route path="/tv/popular" element={<TvSeriesPopular />} />
         <Route path="/tv/top_rated" element={<TvRatedSeries />} />
+        </Route>
         <Route path='/*' element={<h1>404 error page</h1>}></Route>
       </Routes>
     </Router>

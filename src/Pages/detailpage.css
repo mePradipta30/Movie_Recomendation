@@ -174,10 +174,15 @@
 }
 
 .productionCompanyImage {
+  
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* gap: 15px; */
+}
+.productionCompanyImage img{
+  width: 150px;
 }
 .bottomGap{
     margin-top: 2.1rem;

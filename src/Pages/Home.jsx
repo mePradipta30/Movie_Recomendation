@@ -9,7 +9,7 @@ import { MdOndemandVideo } from "react-icons/md";
 import AirCards from '../Component/AirCards';
 import LatestMovies from '../Component/LatestMovies';
 import PopularPeoples from '../Component/PopularPeople';
-import Footer from '../Component/Footer';
+
 import SubFooter from '../Component/SubFooter';
 
 
@@ -266,7 +266,7 @@ const Home = () => {
     <SubFooter />
     <div className='separate'></div>
 
-    <Footer />
+
    </>
   )
 }
