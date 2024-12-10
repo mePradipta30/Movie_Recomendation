@@ -20,7 +20,7 @@ This project is a movie and TV show recommendation website built using React.js.
 
 - React.js
 - API integration for movies is from The Movie Database API.
-  ## Live Demo
+## Live Demo
 
 You can explore the live version of the website here:  
 [Movie Recommendation Website](https://movie-recomendation-weoc.onrender.com/)
