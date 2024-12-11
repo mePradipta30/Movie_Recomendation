@@ -121,7 +121,7 @@ const Home = () => {
         >
             {
                 airingToday.map(series => (
-                    <Link style={{textDecoration: "none", color: "#fff"}} to={`/series/${series.id}`}>
+                    <Link style={{textDecoration: "none", color: "#fff"}}>
                         <div className='seriesPosterImage'>
                             <img src={`https://image.tmdb.org/t/p/original${series && series.backdrop_path}`} alt="series shows" srcset="" />
                         </div>
@@ -177,7 +177,7 @@ const Home = () => {
                 >
                  {
                      nowPlaying.map(playing => (
-                    <Link style={{textDecoration: "none", color: "#fff"}} to={`/now_playing/${playing.id}`}>
+                    <Link style={{textDecoration: "none", color: "#fff"}}>
                         <div className='nowPlaying'>
                             <img src={`https://image.tmdb.org/t/p/original${playing && playing.backdrop_path}`} alt="series shows" srcset="" />
                         </div>
@@ -224,7 +224,7 @@ const Home = () => {
              >
                {
                 popularPerson.map((person,index) => (
-                    <Link key={index} style={{textDecoration: "none", color: "#fff"}} to={`/person/${person.id}`}>
+                    <Link key={index} style={{textDecoration: "none", color: "#fff"}} >
                         <div className='seriesPosterImage'>
                             <img src={`https://image.tmdb.org/t/p/original${person ? person.backdrop_path : ''}`} alt="series shows" srcset="" />
                         </div>
