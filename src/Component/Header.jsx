@@ -6,13 +6,13 @@ import Search from './Search'
 const Header = () => {
   return (
     <div className='header'>
-        <div className='headerLeft'>
-            <Link to="/"><img className='headerIcon' src="https://agoodmovietowatch.com/_next/static/images/agmtw_logo-600-5d0a0ee87b56f613.png" alt="" srcset="" /></Link>
-            <Link to="/movies/top_rated" style={{textDecoration: "none"}}><span className='line'>Top Movies</span></Link>
-            <Link to="/tv/top_rated" style={{textDecoration: "none"}}><span className='line'>Top Tv Shows</span></Link>
-            <Link to="/movies/upcoming" style={{textDecoration: "none"}}><span className='line'>Upcoming</span></Link>
-            
-            <div className="dropdown">
+      <div className='headerLeft'>
+        <Link to="/"><img className='headerIcon' src="https://agoodmovietowatch.com/_next/static/images/agmtw_logo-600-5d0a0ee87b56f613.png" alt="" srcset="" /></Link>
+        <Link to="/movies/top_rated" style={{ textDecoration: "none" }}><span className='line'>Top Movies</span></Link>
+        <Link to="/tv/top_rated" style={{ textDecoration: "none" }}><span className='line'>Top Tv Shows</span></Link>
+        <Link to="/movies/upcoming" style={{ textDecoration: "none" }}><span className='line'>Upcoming</span></Link>
+
+        <div className="dropdown">
           <button className="dropbtn">Discover</button>
           <div className="dropdownContent">
             <Link to="/discover/movie" style={{ textDecoration: 'none' }}>
@@ -23,11 +23,12 @@ const Header = () => {
             </Link>
           </div>
         </div>
-        </div>
+        <Link to='/watchlist' style={{textDecoration: "none"}}><span className='line'>Watchlist</span></Link>
+      </div>
 
-        <div className='headerRight'>
-             <Search />
-        </div>
+      <div className='headerRight'>
+        <Search />
+      </div>
     </div>
   )
 }

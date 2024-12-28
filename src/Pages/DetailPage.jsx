@@ -3,6 +3,7 @@ import './detailpage.css'
 import { useParams } from 'react-router-dom'
 import { CiStar } from "react-icons/ci";
 import MovieReccomend from '../Component/MovieReccomend';
+import {Save} from 'lucide-react'
 
 const DetailPage = () => {
 
@@ -13,6 +14,18 @@ const DetailPage = () => {
      getData()
      window.scrollTo(0,0)
     }, [id])
+
+    const addWatchlist = () => {
+        const currWatchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+        if(!currWatchlist.some(movie => movie.id === detailPage.id)) {
+            localStorage.setItem("watchlist", JSON.stringify([...currWatchlist,detailPage]))
+           // alert(`${setDetailPage.original_title} has been added to your watchlist`)
+        }
+        else {
+
+           // alert(`${detailPage.original_title} is already in your watchlist`)
+        }
+    }
 
     const getData = () => {
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=46478e6cf1e109cb336bc398e8239119&language=en-US`)
@@ -53,6 +66,12 @@ const DetailPage = () => {
                         ""
                     }
                 </div>
+                <button className='watchlist_button' onClick={addWatchlist}> 
+
+                <Save/>
+
+                </button>
+
             </div>
             <div className="movie__detailRightBottom">
                 <div className="synopsisText">Description</div>

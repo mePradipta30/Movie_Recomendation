@@ -1,0 +1,40 @@
+.watchlist-page {
+    padding: 20px;
+    text-align: center;
+}
+
+.watchlist-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.watchlist-item {
+    max-width: 200px;
+    text-align: center;
+}
+
+.watchlist-item-image {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.watchlist-item-info {
+    margin-top: 10px;
+}
+
+.remove-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.remove-button:hover {
+    background-color: darkred;
+}

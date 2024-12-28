@@ -14,6 +14,7 @@ import PersonDetail from './Pages/PersonDetail'
 import Search from './Component/Search'
 import MovieWrapper from './Component/MovieWrapper'
 import Footer from './Component/Footer'
+import WatchlistPage from './Pages/WatchlistPage'
 
 
 
@@ -46,6 +47,7 @@ const App = () => {
         <Route path="/discover/tv" element={<TvDiscover />} />
         <Route path="/tv/popular" element={<TvSeriesPopular />} />
         <Route path="/tv/top_rated" element={<TvRatedSeries />} />
+        <Route path='/watchlist' element = {<WatchlistPage/>} />
         </Route>
         <Route path='/*' element={<h1>404 error page</h1>}></Route>
       </Routes>

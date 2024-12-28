@@ -90,6 +90,10 @@
 .movie__genre:hover{
     background-color: #222;
 }
+.watchlist_button{
+    cursor: pointer;
+
+}
 
 
 .movie__detailRightBottom {
