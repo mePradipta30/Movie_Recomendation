@@ -15,7 +15,7 @@ const WatchlistPage = () => {
         const updatedWatchlist = watchlist.filter((item) => item.id !== id);
         localStorage.setItem("watchlist", JSON.stringify(updatedWatchlist));
         setWatchlist(updatedWatchlist);
-        alert("Item removed from watchlist.");
+       // alert("Item removed from watchlist.");
     };
 
     const goToDetails = (item) => {

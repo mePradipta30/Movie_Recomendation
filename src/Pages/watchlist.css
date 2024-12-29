@@ -8,6 +8,7 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    /* height: 70px; */
 }
 
 .watchlist-item {
