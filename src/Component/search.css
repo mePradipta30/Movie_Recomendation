@@ -54,7 +54,12 @@
     font-weight: 600;
     /* margin-bottom: 20px; */
   }
-  
+  .movie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+  }
   #sort-by {
     border-radius: 20px;
     padding: 5px 5px;
